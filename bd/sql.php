@@ -19,8 +19,8 @@ if (@$_POST['name'] && @$_POST['divida']) {
 
 else if (@$_POST['name']) {
  $nome = mysql_escape_string($_POST['name']);
-echo $nome;
-"INSERT INTO cliente (nome) VALUES ('$nome')";
+$insert_nome = "INSERT INTO cliente (nome) VALUES ('$nome')";
+$conn->	query ($insert_nome);
 }
 
 
