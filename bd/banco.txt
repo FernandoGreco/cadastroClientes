@@ -1,0 +1,29 @@
+create database cadastro;
+
+use cadastro;
+
+create table cliente(
+    id int(4) PRIMARY KEY auto_increment,
+    nome VARCHAR(40) NOT NULL
+    );
+
+create table divida(
+    id_divida int(4) PRIMARY KEY auto_increment,
+    valor varchar (20) NOT NULL,
+    fk_cliente int(4) NOT NULL,
+    foreign key(fk_cliente) references cliente(id)
+    );
+
+
+INSERT INTO cliente(nome)
+VALUES ('Fernando'), 
+('Fernando 2'), 
+('Aristides'),
+('Mirassol');
+
+
+insert into divida (valor,fk_cliente) values
+('R$ 500,00',1),
+('R$ 600,00',2),
+('R$ 700,00',3),
+('R$ 800,00',4);
